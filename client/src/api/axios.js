@@ -1,15 +1,16 @@
 import axios from "axios";
 
-	const API = axios.create({
-		baseURL: "https://task-manager-api-ctih.onrender.com/api",
-	});
+const API = axios.create({
+  baseURL: "http://localhost:5000/api", // backend base URL
+});
 
-	API.interceptors.request.use((req) => {
-		const token = localStorage.getItem("token");
-		if (token) {
-			req.headers.Authorization = `Bearer ${token}`;
-		}
-		return req;
-	});
+// Add token automatically in every request (if exists)
+API.interceptors.request.use((req) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    req.headers.Authorization = `Bearer ${token}`;
+  }
+  return req;
+});
 
 export default API;
