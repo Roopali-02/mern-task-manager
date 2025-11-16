@@ -37,7 +37,7 @@ const Login = () => {
 	}
 	};
 
-	
+
 	return (
 		 <div className="flex items-center justify-center h-screen bg-gray-100">
 			<Card className="w-[380px] shadow-xl">
@@ -81,7 +81,7 @@ const Login = () => {
 						</Button>
 						{error&&<p className="text-red-600 text-center">{error}</p>}
 						 <Divider>OR if account doesn't exist</Divider>
-						 <Button variant="contained" fullWidth className="lightblue-bg" onClick={()=>navigate('/signup')}>
+						 <Button variant="contained" fullWidth className="lightblue-bg" onClick={()=>navigate('/')}>
 							signup
 						</Button>
 					</form>
