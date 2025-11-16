@@ -39,7 +39,9 @@ const Dashboard = () => {
 					<p className="font-serif text-xl font-medium text-white">
 						Task Manager
 					</p>
-
+  				<div className="flex items-center gap-4">
+    
+					{/* Theme Toggle */}
 					<IconButton onClick={toggleTheme} color="inherit">
 						{darkMode ? (
 							<LightMode className="text-yellow-300" />
@@ -47,7 +49,21 @@ const Dashboard = () => {
 							<DarkMode className="text-white" />
 						)}
 					</IconButton>
-				</Toolbar>
+
+					{/* Logout */}
+					<IconButton 
+						color="inherit"
+						onClick={() => {
+							localStorage.removeItem("token");
+							localStorage.removeItem("role");
+							window.location.href = "/";
+						}}
+					>
+						<p className="text-white font-semibold text-base">Logout</p>
+					</IconButton>
+  </div>
+
+</Toolbar>
 			</AppBar>
 
 			<Tasks />

@@ -197,17 +197,23 @@ const handleUpdateTask = async () => {
 					onClose={() => setOpen(false)} 
 					fullWidth 
 					maxWidth="sm"
-					SlotProps={{
-				sx: {
-					bgcolor: "white",
-					color: "black",
-
-					".dark &": {
-						bgcolor: "#1F2937", 
-						color: "#e5e5e5",   
-					},
-				},
-			}}
+					 slotProps={{
+						paper: {
+							className:
+								"bg-white dark:bg-gray-800 text-black dark:text-gray-200"
+						}
+					}}
+					sx={{
+						"& .MuiBackdrop-root": {
+							backgroundColor: "rgba(0, 0, 0, 0.7)",
+						},
+						"& .MuiPaper-root": {
+							backgroundColor: "white",
+							".dark &": {
+								backgroundColor: "#1f2937",
+							}
+						}
+					}}
 			>
 				<DialogTitle  
 					sx={{

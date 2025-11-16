@@ -100,7 +100,7 @@ const Signup = () => {
 							size="small"
 							value={role}
 							onChange={(e) => setRole(e.target.value)}
-							slotProps={{ native: true }}
+							SelectProps={{ native: true }}
             >
 							<option value="user">User</option>
 							<option value="admin">Admin</option>
