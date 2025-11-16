@@ -1,0 +1,7 @@
+# Ignore server environment file
+server/.env
+
+# Ignore node_modules
+client/node_modules
+server/node_modules
+(That’s enough!)

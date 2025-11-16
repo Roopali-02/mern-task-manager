@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.card-bg{
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+}
+
+.signup-bg{
+    background: linear-gradient(to right, #085078, #85d8ce);
+}
+.login-bg{
+    background: linear-gradient(to right, #4b79a1, #283e51);
+}
+.lightblue-bg{
+    background: linear-gradient(to right, #e8cbc0, #636fa4);
+}
+
+.pagination-wrapper .MuiPaginationItem-root svg {
+    color: #1976d2;
+    /* MUI primary */
+}
+
+/* Dark mode */
+html.dark .pagination-wrapper .MuiPaginationItem-root svg {
+    color: #ffffff !important;
+    /* Make arrows visible */
+}
+
+html.dark .pagination-wrapper .MuiPaginationItem-root {
+    color: #ffffff !important;
+    border-color: #ffffff40 !important;
+}
